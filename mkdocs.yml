@@ -51,12 +51,12 @@ theme:
 plugins:
   - tags
   - search
+  - git-authors
   - git-revision-date-localized:
     enable_creation_date: true
   - git-committers:
       repository: CloneWith/tldr-privacy
       branch: main
-  - git-authors
 
 markdown_extensions:
   - footnotes

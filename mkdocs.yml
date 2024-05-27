@@ -1,0 +1,99 @@
+site_name: "tl;dr: Privacy"
+
+theme:
+  name: material
+  custom_dir: overrides
+  icon:
+    logo: material/shield-check
+    tag:
+      default: material/tag-text
+      credit: material/trophy-award
+      req: material/exclamation
+      misc: material/more
+      help: material/information
+      wip: material/pencil
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: 
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - tags
+  - search
+
+markdown_extensions:
+  - footnotes
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+extra:
+  tags:
+    credit: credit
+    guide: help
+    misc: misc
+    WIP: wip
+    collaboration: coop
+    collab: coop
+    request: req
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CloneWith
+    - icon: simple/osu
+      link: https://osu.ppy.sh/users/30973609
+    - icon: simple/bilibili
+      link: https://space.bilibili.com/2046252132
+
+extra_css:
+  - stylesheets/extra.css

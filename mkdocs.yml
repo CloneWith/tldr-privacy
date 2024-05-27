@@ -5,6 +5,9 @@ theme:
   custom_dir: overrides
   icon:
     logo: material/shield-check
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
     tag:
       default: material/tag-text
       credit: material/trophy-award
@@ -27,6 +30,8 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - content.action.edit
+    - content.action.view
     - content.code.copy
     - content.code.annotate
   palette: 
@@ -39,8 +44,6 @@ theme:
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: 
-      primary: teal
-      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -48,6 +51,14 @@ theme:
 plugins:
   - tags
   - search
+  - git-revision-date-localized:
+    enable_creation_date: true
+    enabled: !ENV [CI, false]
+  - git-committers:
+      repository: CloneWith/tldr-privacy
+      enabled: !ENV [CI, false]
+      branch: main
+  - git-authors
 
 markdown_extensions:
   - footnotes
@@ -94,6 +105,9 @@ extra:
       link: https://osu.ppy.sh/users/30973609
     - icon: simple/bilibili
       link: https://space.bilibili.com/2046252132
+
+repo_url: https://github.com/CloneWith/tldr-privacy
+edit_uri: edit/main/docs/
 
 extra_css:
   - stylesheets/extra.css

@@ -53,10 +53,8 @@ plugins:
   - search
   - git-revision-date-localized:
     enable_creation_date: true
-    enabled: !ENV [CI, false]
   - git-committers:
       repository: CloneWith/tldr-privacy
-      enabled: !ENV [CI, false]
       branch: main
   - git-authors
 

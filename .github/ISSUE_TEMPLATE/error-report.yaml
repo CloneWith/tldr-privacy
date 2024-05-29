@@ -28,14 +28,14 @@ body:
     validations:
       required: true
   - type: textarea
-    id: content
+    id: reason
     attributes:
       label: 理由或证据
       description: 指出问题所在，请务必具体精准。如有相关资料、链接或图片，请附上。
     validations:
       required: true
   - type: textarea
-    id: content
+    id: suggestion
     attributes:
       label: 修改方式
       description: 你认为如何解决该问题最好？如果你有方案，请在此指出。没有可留空。

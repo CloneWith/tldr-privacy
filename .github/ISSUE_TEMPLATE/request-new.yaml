@@ -1,0 +1,45 @@
+name: 新文章请求
+description: 希望站点收集的新文章，你来写、我来写、其他人来写都可以。
+title: "[NA] "
+labels: ["!template"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请使用此模板填写目前仓库**未收集的**文章与内容。
+  - type: dropdown
+    id: req_type
+    attributes:
+      label: 请求类别
+      description: 你需要请求什么类型的文章？请在下面选择。
+      options:
+        - 我有新想法，希望有人来写
+        - 我有好主意，希望自己来写
+        - 在其他地方看到了好文章，希望本站收录
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 文章来源
+      description: 如果你选择请求转载，请在此标明文章来源（平台+静态链接），以便确认版权。若选择了其他选项可留空。
+  - type: textarea
+    id: content
+    attributes:
+      label: 想法与推荐理由
+      description: 根据上方的选择，在这里填入你的想法或推荐转载文章的理由。可包括文章主题、相关性等内容。
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 提交前请确认
+      description: |
+        在提交此问题前，请核对并确认：
+      options:
+        - label: 已填入所需内容，问题描述合理清晰
+          required: true
+        - label: 已在问题与讨论列表中查找过，没有相似的问题与请求
+          required: true
+      

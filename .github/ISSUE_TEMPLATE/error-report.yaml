@@ -1,0 +1,54 @@
+name: 内容捉虫
+description: 报告现有内容的各种错误
+title: "[Bug] "
+labels: ["!template", "!report"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请使用此模板填写目前仓库已有内容中的各种错误。
+  - type: dropdown
+    id: bug_type
+    attributes:
+      label: 报告类别
+      description: 错误的所属类别。
+      options:
+        - 事实性错误（如内容不符合事实）
+        - 内容过期（条款、界面等文件已有更新）
+        - 语法错误（用词、语句有误）
+        - 目标错误（感觉被冒犯、不适合全受众）
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 文章位置
+      description: 在下方填入涉及文章的静态链接，以便我们定位问题。
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 理由或证据
+      description: 指出问题所在，请务必具体精准。如有相关资料、链接或图片，请附上。
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 修改方式
+      description: 你认为如何解决该问题最好？如果你有方案，请在此指出。没有可留空。
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 提交前请确认
+      description: |
+        在提交此问题前，请核对并确认：
+      options:
+        - label: 已填入所需内容，问题描述合理清晰
+          required: true
+        - label: 已在问题与讨论列表中查找过，没有相似的问题与请求
+          required: true
+        - label: 我保证填写的信息真实准确，并从客观视角阐释事实
+          required: true

@@ -6,7 +6,7 @@ theme:
   icon:
     logo: material/shield-check
     repo: fontawesome/brands/github
-    edit: material/pencil 
+    edit: material/pencil
     view: material/eye
     tag:
       default: material/tag-text
@@ -34,13 +34,13 @@ theme:
     - content.action.view
     - content.code.copy
     - content.code.annotate
-  palette: 
+  palette:
     # Palette toggle for light mode
     - scheme: default
       primary: teal
       accent: teal
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
     - scheme: slate
@@ -54,6 +54,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - git-committers:
+      enabled: !ENV [CI, false]
       repository: CloneWith/tldr-privacy
       branch: main
 

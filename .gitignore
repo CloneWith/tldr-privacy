@@ -3,3 +3,4 @@
 
 # mkdocs framework
 site
+.cache

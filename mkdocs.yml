@@ -43,7 +43,7 @@ theme:
         icon: material/brightness-7 
         name: Switch to dark mode
     # Palette toggle for dark mode
-    - scheme: 
+    - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -51,9 +51,8 @@ theme:
 plugins:
   - tags
   - search
-  # - git-authors
-  # - git-revision-date-localized:
-  #   enable_creation_date: true
+  - git-revision-date-localized:
+      enable_creation_date: true
   - git-committers:
       repository: CloneWith/tldr-privacy
       branch: main
@@ -99,10 +98,6 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/CloneWith
-    - icon: simple/osu
-      link: https://osu.ppy.sh/users/30973609
-    - icon: simple/bilibili
-      link: https://space.bilibili.com/2046252132
 
 repo_url: https://github.com/CloneWith/tldr-privacy
 edit_uri: edit/main/docs/
